@@ -8,6 +8,7 @@
 * springboot-springcloud (Spring Cloud OpenFeign 使用教程，演示声明式 HTTP 调用)
 * springboot-dubbo (Dubbo 使用教程，演示接口定义、服务暴露、服务引用和本地调用)
 * springboot-nacos (Nacos 使用教程，演示服务注册发现、配置读取和实例查询)
+* springboot-satoken (Sa-Token 登录权限教程，演示登录、Token、角色、权限、注销、踢人下线等常用写法)
 
 #### 模块说明
 
@@ -19,3 +20,4 @@
 | springboot-springcloud | Spring Cloud OpenFeign 声明式调用示例 | 8083 |
 | springboot-dubbo | Dubbo 服务暴露与引用示例，默认本地 injvm 调用 | 8084 |
 | springboot-nacos | Nacos 注册发现与配置中心示例，需要本地或远程 Nacos Server | 8085 |
+| springboot-satoken | Sa-Token 登录认证、权限校验、角色校验和 Token 管理示例 | 8086 |
