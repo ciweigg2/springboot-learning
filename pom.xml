@@ -7,6 +7,9 @@
         <module>springboot-async</module>
         <module>springboot-redisson</module>
         <module>springboot-mybatis-plus</module>
+        <module>springboot-springcloud</module>
+        <module>springboot-dubbo</module>
+        <module>springboot-nacos</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

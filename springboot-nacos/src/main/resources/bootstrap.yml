@@ -1,0 +1,19 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: springboot-nacos
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        namespace:
+        group: DEFAULT_GROUP
+      config:
+        namespace:
+        group: DEFAULT_GROUP
+        file-extension: yaml
+
+demo:
+  message: hello nacos local config

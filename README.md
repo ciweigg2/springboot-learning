@@ -5,6 +5,9 @@
 * springboot-async (springBoot异步任务、异步监控)
 * springboot-redisson (Spring Boot 集成 Redisson，支持单机、集群、哨兵配置，并使用 RedisTemplate 操作)
 * springboot-mybatis-plus (MyBatis-Plus 使用教程，包含数据库连接、增删改查、分页查询、Wrapper 等常见写法)
+* springboot-springcloud (Spring Cloud OpenFeign 使用教程，演示声明式 HTTP 调用)
+* springboot-dubbo (Dubbo 使用教程，演示接口定义、服务暴露、服务引用和本地调用)
+* springboot-nacos (Nacos 使用教程，演示服务注册发现、配置读取和实例查询)
 
 #### 模块说明
 
@@ -13,3 +16,6 @@
 | springboot-async | 异步任务提交、异步任务状态监控 | 8080 |
 | springboot-redisson | Redisson 连接 Redis 的单机、集群、哨兵配置示例 | 8080 |
 | springboot-mybatis-plus | MyBatis-Plus CRUD 和数据库连接学习示例，默认使用 H2 内存库开箱即用 | 8082 |
+| springboot-springcloud | Spring Cloud OpenFeign 声明式调用示例 | 8083 |
+| springboot-dubbo | Dubbo 服务暴露与引用示例，默认本地 injvm 调用 | 8084 |
+| springboot-nacos | Nacos 注册发现与配置中心示例，需要本地或远程 Nacos Server | 8085 |

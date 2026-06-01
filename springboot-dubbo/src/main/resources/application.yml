@@ -1,0 +1,17 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: springboot-dubbo
+
+dubbo:
+  application:
+    name: springboot-dubbo
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: N/A
+  consumer:
+    check: false
