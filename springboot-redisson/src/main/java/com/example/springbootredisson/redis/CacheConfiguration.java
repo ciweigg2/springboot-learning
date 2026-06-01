@@ -1,7 +1,6 @@
 package com.example.springbootredisson.redis;
 
 import com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer;
-import io.micrometer.core.instrument.util.StringUtils;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.*;
@@ -17,6 +16,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,7 +48,7 @@ public class CacheConfiguration {
 					.setTimeout(redisProperties.getPools().getConnTimeout())
 					.setConnectionPoolSize(redisProperties.getPools().getSize())
 					.setConnectionMinimumIdleSize(redisProperties.getPools().getMinIdle());
-			if (StringUtils.isNotBlank(redisProperties.getPassword())) {
+			if (StringUtils.hasText(redisProperties.getPassword())) {
 				serverConfig.setPassword(redisProperties.getPassword());
 			}
 			return Redisson.create(config);
@@ -78,8 +78,6 @@ public class CacheConfiguration {
 							redisProperties.getPools().getSoTimeout())
 					.setConnectTimeout(
 							redisProperties.getPools().getConnTimeout())
-					.setFailedAttempts(
-							redisProperties.getCluster().getFailedAttempts())
 					.setRetryAttempts(
 							redisProperties.getCluster().getRetryAttempts())
 					.setRetryInterval(
@@ -89,7 +87,7 @@ public class CacheConfiguration {
 					.setSlaveConnectionPoolSize(redisProperties.getCluster()
 							.getSlaveConnectionPoolSize())
 					.setTimeout(redisProperties.getTimeout());
-			if (StringUtils.isNotBlank(redisProperties.getPassword())) {
+			if (StringUtils.hasText(redisProperties.getPassword())) {
 				serverConfig.setPassword(redisProperties.getPassword());
 			}
 			return Redisson.create(config);
@@ -114,12 +112,11 @@ public class CacheConfiguration {
 					.addSentinelAddress(newNodes.toArray(new String[0]))
 					.setMasterName(redisProperties.getSentinel().getMaster())
 					.setReadMode(ReadMode.SLAVE)
-					.setFailedAttempts(redisProperties.getSentinel().getFailMax())
 					.setTimeout(redisProperties.getTimeout())
 					.setMasterConnectionPoolSize(redisProperties.getPools().getSize())
 					.setSlaveConnectionPoolSize(redisProperties.getPools().getSize());
 
-			if (StringUtils.isNotBlank(redisProperties.getPassword())) {
+			if (StringUtils.hasText(redisProperties.getPassword())) {
 				serverConfig.setPassword(redisProperties.getPassword());
 			}
 

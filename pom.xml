@@ -5,6 +5,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot-async</module>
+        <module>springboot-redisson</module>
+        <module>springboot-mybatis-plus</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,6 +22,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <lombok.version>1.18.32</lombok.version>
     </properties>
 
     <dependencies>

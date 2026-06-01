@@ -16,6 +16,9 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <lombok.version>1.18.32</lombok.version>
+        <netty.version>4.1.105.Final</netty.version>
+        <redisson.version>3.52.0</redisson.version>
     </properties>
 
     <dependencies>
@@ -39,7 +42,19 @@
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson-spring-boot-starter</artifactId>
-            <version>3.11.0</version>
+            <version>${redisson.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.redisson</groupId>
+                    <artifactId>redisson-spring-data-35</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-data-21</artifactId>
+            <version>${redisson.version}</version>
         </dependency>
 
         <dependency>
