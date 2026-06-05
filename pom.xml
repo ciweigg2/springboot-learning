@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
+        <module>springboot-common</module>
         <module>springboot-async</module>
         <module>springboot-redisson</module>
         <module>springboot-mybatis-plus</module>
