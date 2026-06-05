@@ -9,6 +9,7 @@
 * springboot-dubbo (Dubbo 使用教程，演示接口定义、服务暴露、服务引用和本地调用)
 * springboot-nacos (Nacos 使用教程，演示服务注册发现、配置读取和实例查询)
 * springboot-satoken (Sa-Token 登录权限教程，演示登录、Token、角色、权限、注销、踢人下线等常用写法)
+* springboot-wechat-login (微信登录教程，演示小程序 code 登录、公众号 OAuth 回调、绑定手机号和本地登录态)
 
 #### 模块说明
 
@@ -21,3 +22,4 @@
 | springboot-dubbo | Dubbo 服务暴露与引用示例，默认本地 injvm 调用 | 8084 |
 | springboot-nacos | Nacos 注册发现与配置中心示例，需要本地或远程 Nacos Server | 8085 |
 | springboot-satoken | Sa-Token 登录认证、权限校验、角色校验和 Token 管理示例 | 8086 |
+| springboot-wechat-login | 微信登录示例，默认 mock 微信接口并使用 H2 保存本地用户和登录态 | 8087 |

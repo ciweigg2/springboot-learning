@@ -1,0 +1,25 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: springboot-wechat-login
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:wechat_login_demo;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+wechat:
+  mock-enabled: true
+  mini-program:
+    app-id: demo-mini-appid
+    secret: demo-mini-secret
+  official-account:
+    app-id: demo-mp-appid
+    secret: demo-mp-secret
+    redirect-uri: http://127.0.0.1:8087/wechat/official/callback
